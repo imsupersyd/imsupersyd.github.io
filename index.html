@@ -1,13 +1,617 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello I'm Cindy</title>
+<title>Appboy Template </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+<style type="text/css">
+
+    /* /\/\/\/\/\/\/\/\/ CLIENT-SPECIFIC STYLES /\/\/\/\/\/\/\/\/ */
+    #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" message */
+    .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+    .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div, .ExternalClass * {line-height: 100%;}
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and
+    /* Forces Hotmail to display normal line spacing. */
+    #bodyTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;} /* Windows mobile changing default text sizes */
+    /* These bottom two need to be separate for floating tables */
+    table{border-collapse:collapse;mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+    table td{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+    img{-ms-interpolation-mode:bicubic;} /* Allow smoother rendering of resized image in Internet Explorer */
+/* /\/\/\/\/\/\/\/\/ RESET STYLES /\/\/\/\/\/\/\/\/ */
+    a:link, a:active, a:visited, a .yshortcuts {color:#0058a0;}
+    body, #body_table, #body_cell {height:100% !important; margin:0; padding:0; width:100% !important;}
+	div[style*="margin: 16px 0"] { margin: 0 !important;}
+    img{border:0; line-height:100%; outline:none; text-decoration:none;}
+	a img {border:none;}
+	p {margin: 0 0 1em 0;}
+    hr {
+        border: 0;
+        border-top: 1px solid #e6e8e9 ;
+        border-bottom: 1px solid #fff;
+        width: 550px;
+        margin-left: 30px;
+		margin-TOP: 0px;
+   }
+
+   .lower_side_space {padding-left: 41px !important; padding-right: 41px !important;}
+
+ @media only screen and (max-width:480px) {
+.main_table {width: 100% !important;}
+.wrapper {width: 100% !important;}
+.hide {display: none !important;}
+.align_center {text-align: center !important;}
+.pad_top {padding-top: 20px !important;}
+.side_space {padding-left: 15px !important; padding-right: 15px !important;}
+.side_width {width: 10px !important;}
+.full_width {width: 100% !important; height: auto !important; max-width: 100% !important;}
+.pad_btm {padding-bottom: 20px !important;}
+.f16 { font-size:16px !important;}
+.lower_side_space {padding-left: 15px !important; padding-right: 15px !important;}
+}
+
+ @media only screen and (min-width:480px) and (max-width:650px) {
+.main_table {width: 100% !important;}
+.wrapper {width: 100% !important;}
+.hide {display: none !important;}
+.align_center {text-align: center !important;}
+.pad_top {padding-top: 20px !important;}
+.side_space {padding-left: 15px !important; padding-right: 15px !important;}
+.side_width {width: 10px !important;}
+.full_width {width: 100% !important; height: auto !important; max-width: 100% !important;}
+.pad_btm {padding-bottom: 20px !important;}
+.f16 { font-size:16px !important;}
+.lower_side_space {padding-left: 15px !important; padding-right: 15px !important;}
+}
+
+
+/* iOS BLUE LINKS */
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* this is fix for Gmail App Android and iOS   */
+.gmail { width: 0 !important; display: none !important;}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+.hidden { width: 0 !important; display: none !important;}
+}
+
+/* Android targeting */
+		@media only screen and (-webkit-device-pixel-ratio:.75){
+			/* Put CSS for low density (ldpi) Android layouts in here */
+			img {max-width: 100%;height: auto;}
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1){
+			/* Put CSS for medium density (mdpi) Android layouts in here */
+			img {max-width: 100%;/*height: auto;}
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1.5){
+			/* Put CSS for high density (hdpi) Android layouts in here */
+			img {max-width: 100%;height: auto;}
+		}
+		/* Galaxy Nexus */
+		@media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+			img {max-width: 100%;height: auto;}
+			body {font-size: 16px;}
+		}
+		/* end Android targeting */
+
+		/* iPad MEDIA QUERY */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+    /* iPad 1  2, iPad MINI MEDIA QUERY */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+
+    /* RETINA iPad MEDIA QUERY */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+	    /* iPhone 5 MEDIA QUERY */
+    @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 1){}
+
+    /* iPhone 5S MEDIA QUERY */
+    @media screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2){}
+
+	/* iPhone 6  MEDIA QUERY */
+    @media screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2){}
+
+	/* iPhone 6 Plus MEDIA QUERY */
+    @media screen and (min-device-width: 414px) and (max-device-width: 776px) and (-webkit-min-device-pixel-ratio: 3){}
+
+
+</style>
+
 </head>
-<body>
-  <h1>Hello, I'm Cindy!</h1>
-  <p>
-    I am a marketing automation manager who works at a company that builds marketing automation systems. 
-  </p>
+<body bgcolor="#eeeeee" style="margin:0; padding:0; width:100% !important; background-color:#eeeeee;">
+<!--Full width table start-->
+<td><table width="180" border="0" cellspacing="0" cellpadding="0" align="center">
+                                      <tr>
+                                      <td align="center"><img src="http://info.appboy.com/rs/367-GUY-242/images/appboy_gif.svg" alt="Appboy" width="165" height="100" style="display: block;" border="0" /></td>
+                                      </tr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="eeeeee" style="background-color:#eeeeee;">
+  <tr>
+    <td align="center" valign="top">
+
+    <table align="center" class="main_table" width="650" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" bgcolor="#ffffff">
+        <tr>
+          <td class="hide" style="line-height:1px;min-width:650px; background-color:#eeeeee;" bgcolor="#eeeeee"></td>
+        </tr>
+
+<!-- ===== SINGLE COLUMN SECTION ===== -->
+   <tr>
+      <td>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td></td>
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+        <tr>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="http://info.appboy.com/rs/367-GUY-242/images/appboygif.gif" alt="Appboy Fun" width="650" height="347" class="full_width" style="display:block;max-width:650px;" border="0"/></td>
+              </tr>
+            </table></td>
+        </tr>
+        <!-- ===== DONALD TEST ===== -->
+        <tr>
+                <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="200" class="hide">&nbsp;</td>
+                            <td width="1038" class="side_space">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td height="45">&nbsp;</td>
+                                </tr>
+
+             <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> </tr>
+                  </table></td>
+              </tr>
+                                <tr>
+                                  <td align="center" valign="top" class="f16" style="font-family: Helvetica, Arial, sans-serif; font-size:14px; text-align:center; color:#84dcd7; line-height:1.75;"><strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Dolore &nbsp;aliquam quaerat voluptatem enim ipsam.</strong></td>
+                                </tr>
+                                <tr>
+                                  <td align="left"><a href="https://www.appboy.com/" target="_blank"></a></td>
+                              </tr>
+
+                              <tr>
+                                 <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                </tr>
+
+
+                              <tr>
+                                  <td height="30">&nbsp;</td>
+                              </tr>
+
+                                <tr>
+                                <!--<td height="1" bgcolor="#e6e8e9" style="line-height:1px;font-size:1px;">&nbsp;</td> -->
+                                </tr>
+                                <tr> </tr>
+                                <tr> </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> </tr>
+                  </table></td>
+              </tr>
+                              </table></td>
+                            <td width="200" class="hide">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table>
+                  </td>
+              </tr>
+
+
+        <!-- ===== DONALD TEST ===== -->
+        <!-- ===== //SINGLE COLUMN SECTION ===== -->
+<td bgcolor="#F6F6F6">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+                                <tr><td height="30">&nbsp;</td>
+                              </tr>
+                                <tr>
+                                  <td align="center" style="padding-bottom:15px; font-family: Helvetica, Arial, sans-serif; font-size:15px; font-weight:bold; letter-spacing:1px; text-align:center; color:#1C222B; line-height:1.3;">TEMPORA INCIDUNT</td>
+                              </tr>
+                              <tr>
+                              <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody><tr>
+                                    <td>&nbsp;</td>
+                                    <td width="60" valign="top"><table width="60" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody><tr>
+                                          <td bgcolor="#89E4DF" height="3" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                          <td height="20">&nbsp;</td>
+                                        </tr>
+                                      </tbody></table></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody></table>
+                                </td>
+                            </tr>
+        <!-- ===== THREE COLUMN SECTION ===== -->
+        <td bgcolor="#F7F7F7">
+
+             <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+
+
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="45">&nbsp;</td>
+                      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                           <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><table width="180" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+                                  <td><table width="180" border="0" cellspacing="0" cellpadding="0" align="center">
+                                      <tr>
+                                      <td align="center"><img src="http://info.appboy.com/rs/367-GUY-242/images/img3_gif.jpg" alt="image" width="170" height="140" style="display: block;" border="0" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="20">&nbsp;</td>
+
+                                      </tr>
+                                      <tr>
+                                      <td align="center"  style="font-family:Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #1C222B;">LORUM IPSUM</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:1.3; color: #1C222B;">Sed  perspiciatis  omnis iste natus error sit voluptatem lorum ipsum amit.</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+
+                                    </table></td>
+                                </tr>
+                              </table>
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="5" border="0" cellspacing="0" cellpadding="0" align="left" class="em_hide">
+                                <tr>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="180" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+                                  <td><table width="180" border="0" cellspacing="0" cellpadding="0" align="center">
+                                      <tr>
+                                      <td align="center"><img src="http://info.appboy.com/rs/367-GUY-242/images/img3_gif.jpg" alt="image" width="170" height="140" style="display: block;" border="0" /></td
+                                      ></tr>
+                                      <tr>
+                                        <td height="20">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                         <td align="center"  style="font-family:Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #1C222B;">QUIA VOLUPTAS</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:1.3; color: #1C222B;">Sed  perspiciatis  omnis iste natus error sit voluptatem lorum ipsum amit.</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+
+                                    </table></td>
+                                </tr>
+                              </table>
+
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="5" border="0" cellspacing="0" cellpadding="0" align="left" class="em_hide">
+                                <tr>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="180" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+                                  <td><table width="180" border="0" cellspacing="0" cellpadding="0" align="center">
+                                      <tr>
+                                      <td align="center"><img src="http://info.appboy.com/rs/367-GUY-242/images/img3_gif.jpg" alt="image" width="170" height="140" style="display: block;" border="0" /></td>
+                                      </tr>
+                                      <tr>
+                                        <td height="20">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                         <td align="center"  style="font-family:Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #1C222B;">BEATAE VITAE</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:1.3; color: #1C222B;">Sed  perspiciatis  omnis iste natus error sit voluptatem lorum ipsum amit.</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+                                      <td height="20">&nbsp;</td>
+                                    </table></td>
+                                </tr>
+
+                              </table></td>
+
+                          </tr>
+
+                            <tr>
+                                  <td height="17">&nbsp;</td>
+                                </tr>
+
+
+
+                        </table></td>
+
+                     </table></td>
+                      <td width="45">&nbsp;</td>
+
+                  </tr></table>
+
+
+
+        </tr>
+
+<!-- ===== //THREE COLUMN SECTION NEW SECTION ===== -->
+<td bgcolor="#FFFFFF">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+                                <tr>
+                                  <td class="lower_side_space">
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+
+
+                                    </tr></table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td height="30">&nbsp;</td>
+                              </tr>
+                                <tr>
+                                  <td align="center" style="padding-bottom:15px; font-family: Helvetica, Arial, sans-serif; font-size:15px; font-weight:bold; letter-spacing:1px; text-align:center; color:#1C222B; line-height:1.3;">TEMPORA INCIDUNT</td>
+                              </tr>
+                              <tr>
+                              <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody><tr>
+                                    <td>&nbsp;</td>
+                                    <td width="60" valign="top"><table width="60" border="0" cellspacing="0" cellpadding="0">
+                                        <tbody><tr>
+                                          <td bgcolor="#89E4DF" height="3" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                          <td height="20">&nbsp;</td>
+                                        </tr>
+                                      </tbody></table></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </tbody></table>
+                                </td>
+                            </tr>
+<td bgcolor="#FFFFFF">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+
+
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="45">&nbsp;</td>
+                      <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                           <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td><table width="270" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+                                  <td><table width="270" border="0" cellspacing="0" cellpadding="0" align="center">
+
+                                      <tr>
+                                     <br> <td align="center"  style="font-family:Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #1C222B;">LORUM IPSUM</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center" style="font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height:1.3; color: #1C222B;">Sed  perspiciatis  omnis iste natus error sit voluptatem lorum ipsum amit. Sed  perspiciatis  omnis iste natus error sit voluptatem lorum ipsum amit.</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+
+                                    </table></td>
+                                </tr>
+                              </table>
+
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="11" border="0" cellspacing="0" cellpadding="0" align="left" class="em_hide">
+                                <tr>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="270" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+                                  <td><table width="270" border="0" cellspacing="0" cellpadding="0" align="center">
+                                      <tr>
+                                      <td align="center"><img src="http://info.appboy.com/rs/367-GUY-242/images/img_gif.jpg" alt="image" width="260" height="145" style="display: block;" border="0" /></td
+                                      ></tr>
+
+                                      <tr>
+                                        <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                                      </tr>
+
+                                    </table></td>
+                                </tr>
+                              </table>
+
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                              <table width="11" border="0" cellspacing="0" cellpadding="0" align="left" class="em_hide">
+                                <tr>
+                                  <td>&nbsp;</td>
+                                </tr>
+                              </table>
+
+                              <!--[if gte mso 9]>
+        </td>
+        <td valign="top">
+    <![endif]-->
+
+                            </td>
+
+                          </tr>
+
+                            <tr>
+                                  <td height="17">&nbsp;</td>
+                                </tr>
+
+
+
+                        </table></td>
+
+                     </table></td>
+                      <td width="45">&nbsp;</td>
+</tr>
+
+
+<!-- ===== //TONE COLUMN SECTION ===== -->
+
+   <!-- ===== SINGLE COLUMN SECTION ===== -->
+           <tr>
+
+                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              </tr>
+               <tr>
+          <td bgcolor="#89e4df">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                          <tr>
+                            <td><table width="180" border="0" cellspacing="0" cellpadding="0" align="left" class="wrapper">
+                                <tr>
+
+                                  <tr>
+
+                <td><td align="center"><a href="https://www.appboy.com/" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/screenshot_gif.png" alt="call-to-action" width="650" height="201" class="full_width" style="display:block;max-width:650px;" border="0" /></a></td>
+
+              </tr>
+
+            </table></td></tr>
+
+
+<!-- ===== //SINGLE COLUMN SECTION ===== -->
+
+
+        <!-- ===== FOOTER ===== -->
+        <tr>
+          <td bgcolor="#1a1f26">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <!-- ===== START OF FOOTER ===== -->
+        <tr>
+          <td bgcolor="#1a1f26">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                  <td height="17">&nbsp;</td>
+              </tr>
+              <tr>
+               <td>
+                                      <tr>
+                                      <td align="center"><a href="www.apppboy.com" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/appboy.svg" alt="speaker" width="165" height="55" style="display: block;" border="0" /></td>
+                                      </tr>
+              <tr>
+                  <td height="2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <a href="facebook.com/appboy" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/Facebook_icon_2013-4.svg" width="17" height="17" alt="Facebook" border="0" hspace="8"/></a>
+                  <a href="twitter.com/Appboy" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/8800-4.svg" width="17" height="17" alt="Twitter" border="0" hspace="8"/></a>
+                  <a href="youtube.com/user/appboymobile" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/medium-4.svg" width="17" height="17" alt="Youtube" border="0" hspace="8"/></a>
+                  <a href="facebook.com/appboy" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/61109-4.svg" width="17" height="17" alt="Linkedin" border="0" hspace="8"/></a>
+                  <a href="medium.com/@Appboy" target="_blank"><img src="http://info.appboy.com/rs/367-GUY-242/images/medium-4.svg" width="17" height="17" alt="Medium" border="0" hspace="8"/></a>
+              </tr>
+
+              <tr>
+               <td align="center" style="padding:20px 10px;  font-family:Arial, Helvetica, sans-serif; color:#c4c4c4; font-size:12px;">&copy;Appboy All Rights Reserved 2017 |  <a href="#" target="_blank" style="color:#FFF;">Unsubscribe here</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <!-- ===== //FOOTER ===== -->
+
+
+
+
+<!--Full width table End-->
+
+<!--fix for Gmail App-->
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="hidden" style="min-width:640px;">
+      <div class="gmail" style="white-space:nowrap; font:15px courier; line-height:0;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+  </tr>
+</table>
+<!--End fix for Gmail App-->
+
+<div style="display:none; white-space:nowrap; font:20px courier; color:#ffffff; background-color:#ffffff;">- - - - - - - - - - - - - - - - - - - - - - -</div>
 </body>
 </html>
